@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Fighter</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon - School Boy -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3C!-- Background --%3E%3Ccircle cx='16' cy='16' r='15' fill='%234a90d9'/%3E%3Ccircle cx='16' cy='16' r='14' fill='%233a7ac9'/%3E%3C!-- Body/Shirt --%3E%3Cpath d='M10 18 L10 26 L22 26 L22 18 Z' fill='%234a90d9'/%3E%3C!-- Legs --%3E%3Crect x='11' y='24' width='4' height='6' fill='%23333'/%3E%3Crect x='17' y='24' width='4' height='6' fill='%23333'/%3E%3C!-- Head --%3E%3Ccircle cx='16' cy='12' r='6' fill='%23FFDAB9'/%3E%3C!-- Hair --%3E%3Cpath d='M10 10 Q10 6 16 6 Q22 6 22 10 Q20 8 16 8 Q12 8 10 10 Z' fill='%234a3728'/%3E%3C!-- Eyes --%3E%3Ccircle cx='14' cy='12' r='1' fill='%23000'/%3E%3Ccircle cx='18' cy='12' r='1' fill='%23000'/%3E%3C!-- Arms --%3E%3Crect x='6' y='18' width='4' height='8' rx='2' fill='%23FFDAB9'/%3E%3Crect x='22' y='18' width='4' height='8' rx='2' fill='%23FFDAB9'/%3E%3C!-- Badge --%3E%3Ccircle cx='16' cy='21' r='2.5' fill='%23fff'/%3E%3Ctext x='16' y='22.5' font-size='4' font-weight='bold' fill='%234a90d9' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- Main Menu -->
+  <div id="main-menu" class="menu-screen">
+    <div class="menu-bg-effects">
+      <div class="floating-icon icon-1">&#9733;</div>
+      <div class="floating-icon icon-2">&#9998;</div>
+      <div class="floating-icon icon-3">&#128218;</div>
+      <div class="floating-icon icon-4">&#127942;</div>
+      <div class="floating-icon icon-5">&#9883;</div>
+    </div>
+    <div class="menu-container main-menu-container">
+      <!-- School Boy Character -->
+      <div class="menu-character">
+        <svg viewBox="0 0 120 180" class="character-svg">
+          <!-- Shadow -->
+          <ellipse cx="60" cy="175" rx="35" ry="5" fill="rgba(0,0,0,0.3)"/>
+
+          <!-- Legs -->
+          <rect x="40" y="120" width="16" height="50" rx="4" fill="#333"/>
+          <rect x="64" y="120" width="16" height="50" rx="4" fill="#333"/>
+
+          <!-- Shoes -->
+          <ellipse cx="48" cy="168" rx="12" ry="6" fill="#222"/>
+          <ellipse cx="72" cy="168" rx="12" ry="6" fill="#222"/>
+
+          <!-- Body/Shirt -->
+          <path d="M35 70 L35 125 L85 125 L85 70 Q60 80 35 70 Z" fill="#4a90d9"/>
+
+          <!-- Shirt details -->
+          <line x1="60" y1="75" x2="60" y2="120" stroke="#3a7ac9" stroke-width="2"/>
+          <circle cx="60" cy="82" r="2" fill="#fff"/>
+          <circle cx="60" cy="94" r="2" fill="#fff"/>
+          <circle cx="60" cy="106" r="2" fill="#fff"/>
+
+          <!-- Arms -->
+          <rect x="18" y="72" width="18" height="40" rx="8" fill="#FFDAB9"/>
+          <rect x="84" y="72" width="18" height="40" rx="8" fill="#FFDAB9"/>
+
+          <!-- Fists -->
+          <circle cx="27" cy="115" r="10" fill="#FFDAB9"/>
+          <circle cx="93" cy="115" r="10" fill="#FFDAB9"/>
+
+          <!-- Head -->
+          <circle cx="60" cy="40" r="30" fill="#FFDAB9"/>
+
+          <!-- Hair -->
+          <path d="M30 35 Q30 12 60 10 Q90 12 90 35 Q85 20 60 18 Q35 20 30 35 Z" fill="#4a3728"/>
+          <path d="M45 12 Q50 5 60 8 Q55 15 45 12 Z" fill="#4a3728"/>
+
+          <!-- Eyes -->
+          <ellipse cx="48" cy="42" rx="5" ry="6" fill="#fff"/>
+          <ellipse cx="72" cy="42" rx="5" ry="6" fill="#fff"/>
+          <circle cx="49" cy="43" r="3" fill="#2c1810"/>
+          <circle cx="73" cy="43" r="3" fill="#2c1810"/>
+          <circle cx="50" cy="42" r="1" fill="#fff"/>
+          <circle cx="74" cy="42" r="1" fill="#fff"/>
+
+          <!-- Eyebrows -->
+          <path d="M42 34 Q48 31 54 34" stroke="#4a3728" stroke-width="2" fill="none"/>
+          <path d="M66 34 Q72 31 78 34" stroke="#4a3728" stroke-width="2" fill="none"/>
+
+          <!-- Nose -->
+          <ellipse cx="60" cy="50" rx="3" ry="4" fill="#E8C4A0"/>
+
+          <!-- Mouth - determined smile -->
+          <path d="M52 58 Q60 65 68 58" stroke="#333" stroke-width="2" fill="none"/>
+
+          <!-- Collar -->
+          <path d="M45 70 L60 80 L75 70" stroke="#fff" stroke-width="3" fill="none"/>
+
+          <!-- School Badge -->
+          <circle cx="45" cy="90" r="8" fill="#ffd700" stroke="#cc9900" stroke-width="1"/>
+          <text x="45" y="93" font-size="8" font-weight="bold" fill="#333" text-anchor="middle">S</text>
+        </svg>
+      </div>
+
+      <h1 class="game-title">
+        <span class="title-word">School</span>
+        <span class="title-word">Fighter</span>
+      </h1>
+      <p class="game-subtitle">Rule the Schoolyard!</p>
+
+      <div class="menu-buttons">
+        <button id="btn-singleplayer" class="menu-btn primary-btn">
+          <span class="btn-icon">&#9876;</span>
+          Single Player
+        </button>
+        <button id="btn-multiplayer" class="menu-btn">
+          <span class="btn-icon">&#128101;</span>
+          Multiplayer
+        </button>
+        <button id="btn-settings" class="menu-btn secondary">
+          <span class="btn-icon">&#9881;</span>
+          Settings
+        </button>
+      </div>
+
+      <div class="menu-footer">
+        <span class="studio-credit">Created by Ghostbe Studio</span>
+        <span class="version">v1.0</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Singleplayer Options -->
+  <div id="singleplayer-menu" class="menu-screen hidden">
+    <div class="menu-container">
+      <h2>Single Player</h2>
+
+      <div class="sp-options">
+        <div class="option-group">
+          <label>Number of Opponents</label>
+          <div class="option-buttons">
+            <button class="option-btn selected" data-bots="1">1 Bot</button>
+            <button class="option-btn" data-bots="2">2 Bots</button>
+            <button class="option-btn" data-bots="3">3 Bots</button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <label>Bot Difficulty</label>
+          <div class="option-buttons difficulty-buttons">
+            <button class="option-btn" data-difficulty="EASY">Easy</button>
+            <button class="option-btn selected" data-difficulty="MID">Medium</button>
+            <button class="option-btn" data-difficulty="HARD">Hard</button>
+            <button class="option-btn insane" data-difficulty="INSANE">Insane</button>
+          </div>
+        </div>
+
+        <div class="difficulty-description">
+          <p id="difficulty-desc">Balanced AI with standard resource income.</p>
+        </div>
+      </div>
+
+      <div class="menu-buttons" style="margin-top: 20px;">
+        <button id="btn-start-sp" class="menu-btn">Start Game</button>
+        <button id="btn-sp-back" class="menu-btn secondary">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multiplayer Menu -->
+  <div id="multiplayer-menu" class="menu-screen hidden">
+    <div class="menu-container">
+      <h2>Multiplayer</h2>
+      <div class="menu-buttons">
+        <button id="btn-create-lobby" class="menu-btn">Create Lobby</button>
+        <div class="join-lobby-section">
+          <input type="text" id="lobby-code-input" placeholder="Enter Lobby Code" maxlength="6">
+          <button id="btn-join-lobby" class="menu-btn">Join Lobby</button>
+        </div>
+        <button id="btn-mp-back" class="menu-btn secondary">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lobby Screen -->
+  <div id="lobby-screen" class="menu-screen hidden">
+    <div class="menu-container">
+      <h2>Lobby</h2>
+      <div class="lobby-code">Code: <span id="lobby-code-display">----</span></div>
+      <div id="player-list" class="player-list">
+        <!-- Players will be added here -->
+      </div>
+      <div class="lobby-buttons">
+        <button id="btn-start-game" class="menu-btn" disabled>Start Game</button>
+        <button id="btn-leave-lobby" class="menu-btn secondary">Leave</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Screen -->
+  <div id="settings-screen" class="menu-screen hidden">
+    <div class="menu-container">
+      <h2>Settings</h2>
+      <div class="settings-options">
+        <div class="setting-row">
+          <label for="music-volume">Music Volume</label>
+          <input type="range" id="music-volume" min="0" max="100" value="50">
+        </div>
+        <div class="setting-row">
+          <label for="sfx-volume">SFX Volume</label>
+          <input type="range" id="sfx-volume" min="0" max="100" value="50">
+        </div>
+        <div class="setting-row">
+          <label for="show-grid">Show Grid</label>
+          <input type="checkbox" id="show-grid">
+        </div>
+      </div>
+      <button id="btn-settings-back" class="menu-btn secondary">Back</button>
+    </div>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="hidden">
+    <canvas id="game-canvas"></canvas>
+
+    <!-- HUD -->
+    <div id="hud">
+      <div id="resource-bar">
+        <div class="resource">
+          <span class="resource-icon">&#9733;</span>
+          <span id="reputation-count">50</span>
+        </div>
+        <div class="income-rate">
+          +<span id="income-rate">3</span>/s
+        </div>
+      </div>
+
+      <div id="minimap-container">
+        <canvas id="minimap"></canvas>
+      </div>
+    </div>
+
+    <!-- Unit Panel (bottom) -->
+    <div id="unit-panel">
+      <div id="selection-info">
+        <span id="selection-count">No selection</span>
+      </div>
+      <div id="unit-actions">
+        <!-- Actions shown when units selected -->
+      </div>
+    </div>
+
+    <!-- School Panel (right side) -->
+    <div id="school-panel" class="hidden">
+      <h3>Your School</h3>
+      <div class="school-health">
+        <div class="health-bar">
+          <div id="school-health-fill" class="health-fill"></div>
+        </div>
+        <span id="school-health-text">500/500</span>
+      </div>
+
+      <div class="panel-section">
+        <h4>Create Units</h4>
+        <div id="unit-buttons">
+          <button class="unit-btn" data-unit="REGULAR">
+            <span class="unit-name">Regular</span>
+            <span class="unit-cost">10</span>
+            <span class="unit-count">0/10</span>
+          </button>
+          <button class="unit-btn" data-unit="SENIOR">
+            <span class="unit-name">Senior</span>
+            <span class="unit-cost">20</span>
+            <span class="unit-count">0/5</span>
+          </button>
+          <button class="unit-btn" data-unit="BOXER">
+            <span class="unit-name">Boxer</span>
+            <span class="unit-cost">35</span>
+            <span class="unit-count">0/2</span>
+          </button>
+          <button class="unit-btn locked" data-unit="KID" disabled>
+            <span class="unit-name">Kid (Petard)</span>
+            <span class="unit-cost">18</span>
+            <span class="unit-count">0/4</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <h4>School Upgrades</h4>
+        <div id="school-upgrades">
+          <button class="upgrade-btn" data-upgrade="FENCE">
+            <span class="upgrade-name">Fence</span>
+            <span class="upgrade-cost">20</span>
+          </button>
+          <button class="upgrade-btn" data-upgrade="GUARD">
+            <span class="upgrade-name">Guard Post</span>
+            <span class="upgrade-cost">40</span>
+          </button>
+          <button class="upgrade-btn" data-upgrade="PRESTIGE">
+            <span class="upgrade-name">Prestige</span>
+            <span class="upgrade-cost">50</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <h4>Unit Upgrades</h4>
+        <div id="unit-upgrades">
+          <button class="upgrade-btn" data-upgrade="COMBAT_TRAINING">
+            <span class="upgrade-name">Combat Training</span>
+            <span class="upgrade-cost">5</span>
+          </button>
+          <button class="upgrade-btn locked" data-upgrade="REFLEX" disabled>
+            <span class="upgrade-name">Reflex</span>
+            <span class="upgrade-cost">50</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <h4>Special Skills</h4>
+        <div id="skills">
+          <button class="skill-btn" id="btn-airstrike" data-skill="AIRSTRIKE">
+            <span class="skill-icon">&#9992;</span>
+            <span class="skill-name">Book Airstrike</span>
+            <span class="skill-cost">100</span>
+            <div class="skill-cooldown-bar">
+              <div class="skill-cooldown-fill" id="airstrike-cooldown"></div>
+            </div>
+          </button>
+          <button class="skill-btn glory-btn" id="btn-glory" data-skill="GLORY">
+            <span class="skill-icon">&#10010;</span>
+            <span class="skill-name">Glory To Victory</span>
+            <span class="skill-cost">150</span>
+            <div class="skill-cooldown-bar">
+              <div class="skill-cooldown-fill" id="glory-cooldown"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flag Panel (right side, when flag selected) -->
+    <div id="flag-panel" class="hidden">
+      <h3>Control Point</h3>
+      <div class="panel-section">
+        <h4>Defenses</h4>
+        <p class="flag-info">Build defenses to protect this point. All structures are destroyed if the flag is captured.</p>
+        <div id="flag-actions">
+          <button class="upgrade-btn" id="btn-build-tower">
+            <span class="upgrade-name">Build Tower</span>
+            <span class="upgrade-cost">20</span>
+          </button>
+          <button class="upgrade-btn" id="btn-build-sandbags">
+            <span class="upgrade-name">Sandbags (3x slower capture)</span>
+            <span class="upgrade-cost">30</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Airstrike Target Indicator -->
+    <div id="airstrike-indicator" class="hidden">
+      <div class="airstrike-crosshair"></div>
+      <p>Click to select target area</p>
+      <p class="airstrike-cancel">Right-click to cancel</p>
+    </div>
+
+    <!-- Pause Menu -->
+    <div id="pause-menu" class="menu-overlay hidden">
+      <div class="menu-container">
+        <h2>Paused</h2>
+        <div class="menu-buttons">
+          <button id="btn-resume" class="menu-btn">Resume</button>
+          <button id="btn-quit" class="menu-btn secondary">Quit to Menu</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over" class="menu-overlay hidden">
+      <div class="menu-container">
+        <h2 id="game-over-title">Victory!</h2>
+        <p id="game-over-message">You have conquered all enemy schools!</p>
+        <button id="btn-to-menu" class="menu-btn">Return to Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../shared/constants.js"></script>
+  <script src="js/entities/unit.js"></script>
+  <script src="js/entities/school.js"></script>
+  <script src="js/entities/flag.js"></script>
+  <script src="js/systems/selection.js"></script>
+  <script src="js/systems/combat.js"></script>
+  <script src="js/systems/economy.js"></script>
+  <script src="js/systems/fogOfWar.js"></script>
+  <script src="js/systems/sound.js"></script>
+  <script src="js/systems/ai.js"></script>
+  <script src="js/network/client.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
